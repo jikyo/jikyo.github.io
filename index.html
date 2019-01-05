@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<meta content="辞鏡 日本語に関する記号処理、文字列処理のライブラリーを提供。" name="description">
+<title>辞鏡</title>
+</head>
+
+<body>
+<div class="container">
+
+<img src="./jikyo.png" class="rounded mx-auto d-block" width="123" height="123">  
+
+<div class="b-2 mt-4 mb-2 text-danger"><h3>辞鏡</h3></div>
+<p class="text-muted">
+日本語関連のライブラリーを提供しています。
+現在は主に、記号処理、文字列処理が中心です。
+</p>
+
+<dl class="row">
+  
+<dt class="col-sm-1">suji</dt>
+<dd class="col-sm-9">
+日本語の数字表記を実際の数値に変換するライブラリです。
+漢数字 (五十六)、アラビア数字 (123.456)、漢数字の分数 (三割二分五厘) に対応しています。
+入力文字列内で数値に変換できる部分文字列に対し、start, end, 変換された数値を返却します。
+数値に変換できる文字列が存在しない場合は空リストが返却されます。
+合法的でない入力 (例: 5万六十六6) に対しても、合算 (50,072 = 50,000 + 60 + 6 + 6) を返却します。
+</dd>
+<dd class="col-sm-2">
+<a href="https://github.com/jikyo/suji4j">Java</a> /
+<a href="https://github.com/jikyo/suji4p">Python</a>
+</dd>
+
+<dt class="col-sm-1">romaji</dt>
+<dd class="col-sm-9">
+日本語のひらがな／カタカナ表記をローマ字に変換するライブラリです。
+IME のローマ字入力をベースにしていますが、ヘボン式、日本式、訓令式にも対応しています。
+ローマ字表記候補を可能な限り多く返却することを目標にしています。
+ローマ字に対応していない入力 (漢字等) は入力がそのまま返却されます。(例: お茶の水 → o茶no水)　
+</dd>
+<dd class="col-sm-2">
+<a href="https://github.com/jikyo/romaji4j">Java</a> /
+<a href="https://github.com/jikyo/romaji4p">Python</a>
+</dd>
+
+</dl>
+
+<p class="text-center">Copyright © 2019- jikyo All Rights Reserved.</p>
+
+</div>
+</div>
+</body>
+
+</html>
