@@ -31,13 +31,16 @@
   
 <dt class="col-sm-1">suji</dt>
 <dd class="col-sm-9">
-日本語の数字表記を実際の数値に変換するライブラリです。
-漢数字 (五十六)、アラビア数字 (123.456)、漢数字の分数 (三割二分五厘) に対応しています。
-入力文字列内で数値に変換できる部分文字列に対し、start, end, 変換された数値を返却します。
+日本語の数字表記を実際の数値／漢数字に変換するライブラリです。<br>
+
+数値への変換は、漢数字 (五十六)、アラビア数字 (123.456)、漢数字の分数 (三割二分五厘) に対応しています。
+入力文字列内で数値に変換できる部分文字列に対し、対応する文字列の start、end、変換された数値、を返却します。
 数値に変換できる文字列が存在しない場合は空リストが返却されます。
-合法的でない入力 (例: 5万六十六6) に対しても、合算 (50,072 = 50,000 + 60 + 6 + 6) を返却します。
+合法的でない入力 (例: 5万六十六6) に対しても、合算 (50,072 = 50,000 + 60 + 6 + 6) を返却します。<br>
+漢数字への変換も同様に、対応する文字列の start, end, 変換された漢数字文字列、を返却します。
 </dd>
 <dd class="col-sm-2">
+<a href="https://github.com/jikyo/suji.js">JavaScript</a> /
 <a href="https://github.com/jikyo/suji4j">Java</a> /
 <a href="https://github.com/jikyo/suji4p">Python</a>
 </dd>
@@ -47,9 +50,11 @@
 日本語のひらがな／カタカナ表記をローマ字に変換するライブラリです。
 IME のローマ字入力をベースにしていますが、ヘボン式、日本式、訓令式にも対応しています。
 ローマ字表記候補を可能な限り多く返却することを目標にしています。
+「ちゃ」はローマ字表記「cha」、「tya」、「chixya」、「tixya」、「chilya」、「tilya」と複数のローマ字表記に変換されます。
 ローマ字に対応していない入力 (漢字等) は入力がそのまま返却されます。(例: お茶の水 → o茶no水)　
 </dd>
 <dd class="col-sm-2">
+<a href="https://github.com/jikyo/romaji.js">JavaScript</a> /
 <a href="https://github.com/jikyo/romaji4j">Java</a> /
 <a href="https://github.com/jikyo/romaji4p">Python</a>
 </dd>
